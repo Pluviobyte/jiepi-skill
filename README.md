@@ -23,13 +23,37 @@
 
 ## 安装
 
-安装到 Codex：
+推荐使用 Skills CLI 安装：
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill
+```
+
+指定安装到 Claude Code：
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent claude-code
+```
+
+指定安装到 Codex：
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent codex
+```
+
+本仓库只有一个 Skill，所以 `--skill jiepi-skill` 也可以省略：
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill
+```
+
+也可以手动安装到 Codex：
 
 ```bash
 git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.codex/skills/jiepi-skill
 ```
 
-安装到 Claude Code：
+手动安装到 Claude Code：
 
 ```bash
 git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.claude/skills/jiepi-skill
@@ -137,13 +161,37 @@ Jiepi Skill audits local AI agent skill usage. It works as a Skill for Codex and
 
 ## Install
 
+Recommended installation with the Skills CLI:
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill
+```
+
+Install for Claude Code:
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent claude-code
+```
+
 Install for Codex:
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent codex
+```
+
+This repository contains one skill, so `--skill jiepi-skill` is optional:
+
+```bash
+npx skills add https://github.com/Pluviobyte/jiepi-skill
+```
+
+Manual install for Codex:
 
 ```bash
 git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.codex/skills/jiepi-skill
 ```
 
-Install for Claude Code:
+Manual install for Claude Code:
 
 ```bash
 git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.claude/skills/jiepi-skill
