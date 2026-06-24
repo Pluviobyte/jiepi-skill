@@ -1,20 +1,20 @@
 # 洁癖 Skill
 
-洁癖 Skill 是一个用于审计 AI Agent Skill 使用情况的 Codex Skill。它会扫描本机 Codex、Claude、Cursor 的 Skill 安装目录和历史记录，统计哪些 Skill 近期用过、调用了多少次、最后一次使用是什么时候，并给出清理建议。
+洁癖 Skill 是一个用于审计 AI Agent Skill 使用情况的本地 Skill。它适用于 Codex 和 Claude Code，也可以作为普通脚本直接运行。它会扫描本机 Codex、Claude Code、Cursor 的 Skill 安装目录和历史记录，统计哪些 Skill 近期用过、调用了多少次、最后一次使用是什么时候，并给出清理建议。
 
 语言 / Language：中文优先 | [English](#english-readme)
 
 ## 适合解决什么问题
 
 - 想知道本机到底安装了哪些 Skill。
-- 想分析 Claude、Codex、Cursor 各自调用 Skill 的频率。
+- 想分析 Claude Code、Codex、Cursor 各自调用 Skill 的频率。
 - 想找出最近没有使用、长期闲置、可以考虑清理的 Skill。
 - 想区分“真正调用过”和“只是出现在系统 Skill 列表里”的 Skill。
 - 想为 Skill 清理做一个保守、可复核的决策表。
 
 ## 功能
 
-- 盘点 Codex、Claude、Cursor 的已安装或已同步 Skill。
+- 盘点 Codex、Claude Code、Cursor 的已安装或已同步 Skill。
 - 统计确认调用次数、近 30 天调用次数、会话数和最后使用时间。
 - 按 `keep`、`review`、`cleanup-candidate` 给出建议。
 - 合并同一插件的不同缓存版本，避免重复计数。
@@ -23,23 +23,31 @@
 
 ## 安装
 
-把仓库放到 Codex 的 Skill 目录：
+安装到 Codex：
 
 ```bash
 git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.codex/skills/jiepi-skill
 ```
 
-如果已经存在旧目录，可以先备份或删除旧目录后再克隆。
+安装到 Claude Code：
+
+```bash
+git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.claude/skills/jiepi-skill
+```
+
+如果已经存在旧目录，可以先备份或删除旧目录后再克隆。两种安装方式可以并存。
 
 ## 使用
 
-在 Codex 里直接调用：
+在 Codex 或 Claude Code 里直接调用：
 
 ```text
 使用 $jiepi-skill 分析我的 Skill 使用频率和清理建议
 ```
 
 也可以直接运行脚本：
+
+下面示例使用 Codex 安装路径；如果安装在 Claude Code，把 `~/.codex/skills/jiepi-skill` 替换为 `~/.claude/skills/jiepi-skill` 即可。
 
 ```bash
 python3 ~/.codex/skills/jiepi-skill/scripts/audit_skill_usage.py --format markdown
@@ -108,19 +116,19 @@ python3 ~/.codex/skills/jiepi-skill/scripts/audit_skill_usage.py --format json
 
 # Jiepi Skill
 
-Jiepi Skill audits local AI agent skill usage. It scans installed or synced skills for Codex, Claude, and Cursor, then produces a report with confirmed calls, recent usage, sessions, last-used timestamps, and cleanup recommendations.
+Jiepi Skill audits local AI agent skill usage. It works as a Skill for Codex and Claude Code, and it can also be run as a plain script. It scans installed or synced skills for Codex, Claude Code, and Cursor, then produces a report with confirmed calls, recent usage, sessions, last-used timestamps, and cleanup recommendations.
 
 ## What It Helps With
 
 - See which skills are installed locally.
-- Analyze skill call frequency across Claude, Codex, and Cursor.
+- Analyze skill call frequency across Claude Code, Codex, and Cursor.
 - Find stale or unused skills.
 - Distinguish confirmed skill loads from plain system skill listings.
 - Make conservative, reviewable cleanup decisions.
 
 ## Features
 
-- Inventories Codex, Claude, and Cursor skills.
+- Inventories Codex, Claude Code, and Cursor skills.
 - Reports confirmed calls, recent calls, sessions, and last-used time.
 - Labels skills as `keep`, `review`, or `cleanup-candidate`.
 - Merges duplicate cache versions from the same plugin family.
@@ -129,21 +137,29 @@ Jiepi Skill audits local AI agent skill usage. It scans installed or synced skil
 
 ## Install
 
-Clone this repository into your Codex skills directory:
+Install for Codex:
 
 ```bash
 git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.codex/skills/jiepi-skill
 ```
 
+Install for Claude Code:
+
+```bash
+git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.claude/skills/jiepi-skill
+```
+
 ## Use
 
-Invoke it in Codex:
+Invoke it in Codex or Claude Code:
 
 ```text
 Use $jiepi-skill to analyze installed skills, recent usage, call counts, and cleanup recommendations.
 ```
 
 Or run the script directly:
+
+The examples below use the Codex install path. If you installed it for Claude Code, replace `~/.codex/skills/jiepi-skill` with `~/.claude/skills/jiepi-skill`.
 
 ```bash
 python3 ~/.codex/skills/jiepi-skill/scripts/audit_skill_usage.py --format markdown

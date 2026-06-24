@@ -1,4 +1,4 @@
 interface:
   display_name: "洁癖 Skill"
-  short_description: "审计 Skill 使用频率与清理候选"
-  default_prompt: "Use $jiepi-skill to analyze installed skills, recent usage, call counts, and cleanup recommendations."
+  short_description: "审计多 Agent Skill 使用与清理候选"
+  default_prompt: "Use $jiepi-skill to analyze Codex, Claude Code, and Cursor skills, recent usage, call counts, and cleanup recommendations."

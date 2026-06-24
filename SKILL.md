@@ -1,6 +1,6 @@
 ---
 name: jiepi-skill
-description: "洁癖 Skill: Audit installed AI agent skills across Codex, Claude, Cursor, and optional project-local skill folders. Use when the user asks which skills are installed, how often Claude/Codex/Cursor used skills, whether a skill was used recently, which skills are stale or unused, or wants cleanup/removal/disable recommendations for skills."
+description: "洁癖 Skill: Audit installed AI agent skills across Codex, Claude Code, Cursor, and optional project-local skill folders. Use when the user asks which skills are installed, how often Claude Code/Codex/Cursor used skills, whether a skill was used recently, which skills are stale or unused, or wants cleanup/removal/disable recommendations for skills."
 ---
 
 # 洁癖 Skill
