@@ -1,0 +1,4 @@
+interface:
+  display_name: "洁癖 Skill"
+  short_description: "审计 Skill 使用频率与清理候选"
+  default_prompt: "Use $jiepi-skill to analyze installed skills, recent usage, call counts, and cleanup recommendations."
