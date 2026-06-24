@@ -29,38 +29,6 @@
 npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill
 ```
 
-指定安装到 Claude Code：
-
-```bash
-npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent claude-code
-```
-
-指定安装到 Codex：
-
-```bash
-npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent codex
-```
-
-本仓库只有一个 Skill，所以 `--skill jiepi-skill` 也可以省略：
-
-```bash
-npx skills add https://github.com/Pluviobyte/jiepi-skill
-```
-
-也可以手动安装到 Codex：
-
-```bash
-git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.codex/skills/jiepi-skill
-```
-
-手动安装到 Claude Code：
-
-```bash
-git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.claude/skills/jiepi-skill
-```
-
-如果已经存在旧目录，可以先备份或删除旧目录后再克隆。两种安装方式可以并存。
-
 ## 使用
 
 在 Codex 或 Claude Code 里直接调用：
@@ -165,36 +133,6 @@ Recommended installation with the Skills CLI:
 
 ```bash
 npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill
-```
-
-Install for Claude Code:
-
-```bash
-npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent claude-code
-```
-
-Install for Codex:
-
-```bash
-npx skills add https://github.com/Pluviobyte/jiepi-skill --skill jiepi-skill --agent codex
-```
-
-This repository contains one skill, so `--skill jiepi-skill` is optional:
-
-```bash
-npx skills add https://github.com/Pluviobyte/jiepi-skill
-```
-
-Manual install for Codex:
-
-```bash
-git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.codex/skills/jiepi-skill
-```
-
-Manual install for Claude Code:
-
-```bash
-git clone https://github.com/Pluviobyte/jiepi-skill.git ~/.claude/skills/jiepi-skill
 ```
 
 ## Use
